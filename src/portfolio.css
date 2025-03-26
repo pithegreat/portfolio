@@ -1,0 +1,196 @@
+@keyframes slideAboutMe {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes slideSkills {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes slideExperience {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+@keyframes slideEducation {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+body{
+    /* background: linear-gradient(180deg, #872D96 0%, #605AA5 100%); */
+    background-color: black;
+    color:whitesmoke;
+    
+}
+.Navbar{
+    position: fixed;
+    top: 0;
+}
+#scrollspySkills{
+    text-align: left;
+    padding: 10px;
+    float: inline-start;
+}
+h1{
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+  margin-bottom: 20px;
+}
+.skill{
+    list-style: none;
+    width: fit-content;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid whitesmoke;
+}
+.skill:hover{
+    background-color: whitesmoke;
+    color:#605AA5;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    border-radius: 20px;
+}
+.card:hover{
+    box-shadow: #d932f7 0px 0px 10px;
+}
+:link{
+    text-decoration: none;
+}
+.joblogo{
+    display: inline-block;
+    width: 15%;
+    height: fit-content;
+    align-self: center;
+    margin: 20px 0px 20px 20px;
+}
+.job{
+    display: inline-block;
+    width: 70%;
+}
+#scrollspyEducation{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    float: inline-end;
+    animation: slideEducation 1s;
+    animation-fill-mode: forwards;
+}
+#scrollspyEducation h2,h4{
+    text-align: center;  
+}
+#ubclogo{
+    width: 80%;
+    align-self: center;
+}
+.experiences{
+    height: 40vh;
+    overflow: scroll;
+    scrollbar-width: none; 
+}
+#search{
+    float: inline-end;
+}
+.table>:not(caption)>*>* {
+    background-color: transparent;
+    color: whitesmoke;
+    width: fit-content;
+    justify-content: center;
+    padding-right: 0px;
+    text-align: center;
+    margin: 10px;
+}
+.table{
+    width:fit-content;
+    align-self: center;
+}
+#introText{
+    height: 10vh;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5vh;
+}
+#scrollspyAboutMe{
+    width: 50%;
+    float: inline-start;
+    animation: slideAboutMe 1s;
+    animation-fill-mode: forwards;
+
+}
+#scrollspySkills{
+    width: 90%;
+    animation: slideSkills 1s;
+    animation-fill-mode: forwards;
+}
+.sections{
+    background-color: #282c34;
+    margin: 10px;
+    border-radius: 20px;
+}
+#home{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#scrollspyExperience{
+    width: 90%;
+    float:inline-end;
+    height: 55vh;
+    animation: slideExperience 1s;
+    animation-fill-mode: forwards;
+}
+h1{
+    background: linear-gradient(135deg, #d932f7 0%, #3327b6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#pfp{
+    border-radius: 50%;
+    width: 40%;
+    float: inline-start;
+    margin: 10px;
+    border: 2px solid whitesmoke;
+    vertical-align: middle;
+}
+#scrollspyProjects{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.projects{
+    background:none;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+}
+.projects:hover{
+    /* background-color: #605AA5; */
+}
+.technologies{
+    list-style: none;
+    width: fit-content;
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 30px;
+    border: 1px solid whitesmoke;
+}
