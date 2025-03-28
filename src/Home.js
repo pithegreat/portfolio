@@ -1,7 +1,7 @@
 import { Navbar, Nav } from "react-bootstrap";
 import { Container } from "react-bootstrap";
-import { Form } from "react-bootstrap";
-import { InputGroup } from "react-bootstrap";
+// import { Form } from "react-bootstrap";
+// import { InputGroup } from "react-bootstrap";
 import { Image } from "react-bootstrap";
 import { TypeAnimation } from "react-type-animation";
 import ubclogo from "./Images/UBC-logo-2018-narrowsig-white-rgb72.png";
@@ -10,7 +10,7 @@ import { Card } from "react-bootstrap";
 import cst from "./Images/CST.jpg";
 import ubc from "./Images/UBC.png";
 import pfp from "./Images/pfp.jpg";
-import { Button } from "react-bootstrap";
+// import { Button } from "react-bootstrap";
 
 
 
