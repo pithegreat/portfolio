@@ -7,11 +7,11 @@ import { TypeAnimation } from "react-type-animation";
 import ubclogo from "./Images/UBC-logo-2018-narrowsig-white-rgb72.png";
 import "./portfolio.css";
 import { Card } from "react-bootstrap";
-import { Table } from "react-bootstrap";
 import cst from "./Images/CST.jpg";
 import ubc from "./Images/UBC.png";
 import pfp from "./Images/pfp.jpg";
-// import { link } from "fs";
+import { Button } from "react-bootstrap";
+
 
 
 function Home() {
@@ -141,6 +141,23 @@ function Home() {
     }
   ];
 
+  // const resumedownload = () => {
+  //   fetch("Peter's Complete Resume.pdf").then((response) => {
+  //     response.blob().then((blob) => {
+      
+  //         // Creating new object of PDF file
+  //         const fileURL =
+  //             window.URL.createObjectURL(blob);
+              
+  //         // Setting various property values
+  //         let alink = document.createElement("a");
+  //         alink.href = fileURL;
+  //         alink.download = "Peter's Complete Resume.pdf";
+  //         alink.click();
+  //     });
+  // });
+  // }
+
   return (
     <>
       <title>Peter Okpoga Idoko</title>
@@ -155,11 +172,11 @@ function Home() {
               <Nav.Link href="#scrollspySkills">Skills</Nav.Link>
               <Nav.Link href="#scrollspyExperience">Experience</Nav.Link>
               <Nav.Link href="#scrollspyEducation">Education</Nav.Link>
-              <Nav.Link href="/Projects">Projects</Nav.Link>
+              <Nav.Link href="#scrollspyProjects">Projects</Nav.Link>
               
             </Nav>
           </Container>
-          <Form id="search" inline>
+          {/* <Form id="search" inline>
                 <InputGroup>
                   <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
                   <Form.Control
@@ -168,8 +185,8 @@ function Home() {
                     aria-describedby="basic-addon1"
                   />
                 </InputGroup>
-              </Form>
-              </Container>
+              </Form> */}
+        </Container>
         </Navbar>
         <Container id="home">
         <Container id="introText">
@@ -184,11 +201,12 @@ function Home() {
         </Container>
         <Container id="scrollspyAboutMe" className="sections">
           <h1>About Me</h1>
-          <Image src={pfp} alt="Profile Picture" id="pfp"/>
-          <p>
-            I am a software developer with a passion for creating innovative solutions to everyday problems. I have experience in web development, mobile development, and cloud computing. I am particularly interested in the intersection between business management and software development which has led me to various entrepreneurial ventures. I am always looking for new challenges and opportunities to learn and grow.
-          </p>
           
+          <Image src={pfp} alt="Profile Picture" id="pfp"/>
+          {/* <p> */}
+            I am a software developer with a passion for creating innovative solutions to everyday problems. I have experience in web development, mobile development, and cloud computing. I am particularly interested in the intersection between business management and software development which has led me to various entrepreneurial ventures. I am always looking for new challenges and opportunities to learn and grow.
+          {/* </p> */}
+          {/* <Button variant="primary" id='resume' onClick={resumedownload}>Download my resume here</Button> */}
         </Container>
         
         <Container id="scrollspyEducation" className="sections">

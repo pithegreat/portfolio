@@ -182,8 +182,12 @@ h1{
     color: whitesmoke;
     border: 1px solid whitesmoke;
 }
-.projects:hover{
-    /* background-color: #605AA5; */
+#resume{
+    background: linear-gradient(135deg, #d932f7 0%, #3327b6 100%);
+    border: none;
+    border-radius: 40px;
+    margin: 20px;
+    float: inline-end;
 }
 .technologies{
     list-style: none;
