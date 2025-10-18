@@ -10,6 +10,9 @@ import { Card } from "react-bootstrap";
 import cst from "./Images/CST.jpg";
 import ubc from "./Images/UBC.png";
 import pfp from "./Images/pfp.jpg";
+import itb from "./Images/ITB.png";
+import suo from "./Images/SUO.jpeg";
+
 // import { Button } from "react-bootstrap";
 
 
@@ -23,6 +26,31 @@ function Home() {
   ];
 
   const experiences = [
+    {
+      company: "Students' Union of UBC Okanagan",
+      role: "President",
+      date: "May 2025 – Present",
+      location: "Kelowna, BC",
+      description: [
+        "Served as the Board Chair and President of a multi-million dollar organization representing over 12,000 students.",
+        "Advocated on behalf of 12,000 constituents on issues including career development, DEI, and food insecurity.",
+        "Coordinated a reformation of the organization's culture to align with sustainable growth and development.",
+        "Led monthly meetings with the executive team to ensure alignment on goals and initiatives.",
+        "Represented the Students' Union at various university and external meetings and events."
+      ]
+    },
+    {
+      company: "Impact Toolbox",
+      role: "WEB DEVELOPER CO-OP",
+      date: "June 2025 – August 2025",
+      location: "Remote",
+      description: [
+        "Suggested and complemented improvements to SEO and accessibility features across the company websites.",
+        "Implemented design changes to enhance user experience and accessibility.",
+        "Contributed to the development of a new LMS site, leveraging modern web technologies to improve user experience and engagement.",
+        "Effectively and actively communicated with other members of the development team."
+      ]
+    },
     {
       company: "Central Square Technologies",
       role: "SOFTWARE DEVELOPER CO-OP",
@@ -212,18 +240,7 @@ function Home() {
         <Container id="scrollspyEducation" className="sections">
           <h1>Education</h1>
           <Image src={ubclogo} alt="UBC Logo" id="ubclogo"/>
-            {/* <h2>University of British Columbia</h2> */}
-            {/* <Table>
-                <tr>
-                    <td><h4>Major: Computer Science</h4></td>
-                    <td><h4>Cumulative Average: 84.2%</h4></td>
-                </tr>
-                <tr>
-                    <td><h4>Minor: Management</h4></td>
-                    <td><h4>Expected Graduation: December 2026</h4></td>
-                </tr>
-            </Table> */}
-            <h4>Major: Computer Science</h4>
+            <h4>Major: Computer Science, Honors</h4>
             <h4>Minor: Management</h4>
             <h4>Cumulative Average: 84.2%</h4>
             {/* <h4>Expected Graduation: December 2026</h4> */}
@@ -234,7 +251,7 @@ function Home() {
           <div className="experiences">
           {experiences.map((experience, index) => (
             <Card key={index}>
-              <Card.Img variant="left" src={experience.company==='Central Square Technologies'?cst:ubc} alt={experience.company} className="joblogo"/>
+              <Card.Img variant="left" src={experience.company==='Central Square Technologies'?cst:experience.company==='Students\' Union of UBC Okanagan'? suo:experience.company==='Impact Toolbox'?itb:ubc} alt={experience.company} className="joblogo"/>
               <Card.Body >
                 <Card.Title>{experience.company}</Card.Title>
                 <h3>{experience.role}</h3>
