@@ -1,7 +1,5 @@
 import { Navbar, Nav } from "react-bootstrap";
 import { Container } from "react-bootstrap";
-// import { Form } from "react-bootstrap";
-// import { InputGroup } from "react-bootstrap";
 import { Image } from "react-bootstrap";
 import { TypeAnimation } from "react-type-animation";
 import ubclogo from "./Images/UBC-logo-2018-narrowsig-white-rgb72.png";
@@ -12,9 +10,6 @@ import ubc from "./Images/UBC.png";
 import pfp from "./Images/pfp.jpg";
 import itb from "./Images/ITB.png";
 import suo from "./Images/SUO.jpeg";
-
-// import { Button } from "react-bootstrap";
-
 
 
 function Home() {
@@ -116,10 +111,10 @@ function Home() {
       date: "May 2024 – Present",
       location: "Kelowna, BC",
       description: [
-        "Guided groups of 10+ prospective students on campus tours.",
-        "Composed and presented a pre-tour presentation to 10+ tour guests.",
+        "Guided groups of prospective students on comprehensivecampus tours.",
+        "Composed and presented a detailed 10 min pre-tour presentation to tour guests.",
         "Empathetically and actively listened and fielded tour guests’ inquiries.",
-        "Assisted Student recruitment staff in recruitment and advising events."
+        "Supported Student recruitment staff in recruitment and advising events."
       ]
     },
     {
@@ -169,52 +164,25 @@ function Home() {
     }
   ];
 
-  // const resumedownload = () => {
-  //   fetch("Peter's Complete Resume.pdf").then((response) => {
-  //     response.blob().then((blob) => {
-      
-  //         // Creating new object of PDF file
-  //         const fileURL =
-  //             window.URL.createObjectURL(blob);
-              
-  //         // Setting various property values
-  //         let alink = document.createElement("a");
-  //         alink.href = fileURL;
-  //         alink.download = "Peter's Complete Resume.pdf";
-  //         alink.click();
-  //     });
-  // });
-  // }
-
   return (
     <>
       <title>Peter Okpoga Idoko</title>
       <body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabIndex="0">
         
-        <Navbar id="navbar-example2" bg="dark" variant="dark">
+        <Navbar id="navbar-example2" bg="dark" variant="dark" expand="md">
           <Container>
-          <Navbar.Brand href="#home">Peter Okpoga Idoko</Navbar.Brand>
-          <Container>
-            <Nav className="me-auto">
-              <Nav.Link href="#scrollspyAboutMe">About Me</Nav.Link>
-              <Nav.Link href="#scrollspySkills">Skills</Nav.Link>
-              <Nav.Link href="#scrollspyExperience">Experience</Nav.Link>
-              <Nav.Link href="#scrollspyEducation">Education</Nav.Link>
-              <Nav.Link href="#scrollspyProjects">Projects</Nav.Link>
-              
-            </Nav>
+            <Navbar.Brand href="#home">Peter Okpoga Idoko</Navbar.Brand>
+            <Navbar.Toggle aria-controls="main-navbar" />
+            <Navbar.Collapse id="main-navbar">
+              <Nav className="ms-auto">
+                <Nav.Link href="#scrollspyAboutMe">About Me</Nav.Link>
+                <Nav.Link href="#scrollspySkills">Skills</Nav.Link>
+                <Nav.Link href="#scrollspyExperience">Experience</Nav.Link>
+                <Nav.Link href="#scrollspyEducation">Education</Nav.Link>
+                <Nav.Link href="#scrollspyProjects">Projects</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
           </Container>
-          {/* <Form id="search" inline>
-                <InputGroup>
-                  <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
-                  <Form.Control
-                    placeholder="Search"
-                    aria-label="Search"
-                    aria-describedby="basic-addon1"
-                  />
-                </InputGroup>
-              </Form> */}
-        </Container>
         </Navbar>
         <Container id="home">
         <Container id="introText">
@@ -243,9 +211,7 @@ function Home() {
             <h4>Major: Computer Science, Honors</h4>
             <h4>Minor: Management</h4>
             <h4>Cumulative Average: 84.2%</h4>
-            {/* <h4>Expected Graduation: December 2026</h4> */}
         </Container>
-        
         <Container id="scrollspyExperience" className="sections">
           <h1>Experience</h1>
           <div className="experiences">
@@ -253,7 +219,7 @@ function Home() {
             <Card key={index}>
               <Card.Img variant="left" src={experience.company==='Central Square Technologies'?cst:experience.company==='Students\' Union of UBC Okanagan'? suo:experience.company==='Impact Toolbox'?itb:ubc} alt={experience.company} className="joblogo"/>
               <Card.Body >
-                <Card.Title>{experience.company}</Card.Title>
+                <Card.Title className="cardTitle">{experience.company}</Card.Title>
                 <h3>{experience.role}</h3>
                 <p>{experience.date} - {experience.location}</p>
                 <ul>
